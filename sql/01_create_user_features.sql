@@ -5,7 +5,7 @@
 Автор: Чаунина Инесса
 */
 
-with top_region as (
+WITH top_region as (
     -- Топ-3 региона по количеству доставленных и отмененных заказов
     select
         u.region,
@@ -203,5 +203,4 @@ join order_payments_stat as ops
     using (user_id, region)
 order by
     urs.total_orders desc;
-```
 
